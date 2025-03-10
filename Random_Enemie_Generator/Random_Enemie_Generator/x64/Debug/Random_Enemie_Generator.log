@@ -1,0 +1,3 @@
+﻿  Random_Enemie_Generator.cpp
+C:\Users\jorge\OneDrive\Escritorio\POO_C_PLUS_PLUS\Random_Enemie_Generator\Random_Enemie_Generator\Random_Enemie_Generator.cpp(50,25): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Random_Enemie_Generator.vcxproj -> C:\Users\jorge\OneDrive\Escritorio\POO_C_PLUS_PLUS\Random_Enemie_Generator\x64\Debug\Random_Enemie_Generator.exe
