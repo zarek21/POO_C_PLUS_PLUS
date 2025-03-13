@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 class item
 {
-private:
+ private:
     string nombreItem;
     string tipoItem;
     int cantidadItem;
@@ -28,6 +29,27 @@ public:
 
 };
 
+class personaje{
+
+ private:
+   string nombrePersonaje;
+   vector <item> inventarioPersonaje;
+public:
+    personaje(string nombrePersonaje){
+        nombrePersonaje = nombrePersonaje;
+    }
+
+    //Metodo para agregar el item al inventario del personaje
+    
+    void funcAgregarItemInventario(item paramItem) {
+        inventarioPersonaje.push_back(paramItem); //Agregar al vector, pushback hace que se pongan los items en orden hacia abajo.
+
+    }
+
+    void funcMostrarInventario() {
+
+    }
+};
 
 int main()
 {
@@ -36,8 +58,11 @@ int main()
     string tipoItem;
     int cantidadItem;
 
-    cout << "ingrese el nombre delpersonaje" << endl;
+    cout << "ingrese el nombre del personaje" << endl;
     getline(cin, nombrePersonaje);//Leer nombre completo con espacios
+
+    //Crear Obejto Personaje 
+    personaje jugador(nombrePersonaje);
 
     cout << "Nombre del Item: " << endl;
     getline(cin, nombreItem);
@@ -50,7 +75,9 @@ int main()
 
     //Enviar información ingresada por el usuario al constructor
 
-    cout << nombrePersonaje << " ha sido creado" << endl;
+    item nuevoItem(nombreItem,tipoItem,cantidadItem);
+    nuevoItem.funcMostrarInfoInventario();
+
 
     return 0;
 }
